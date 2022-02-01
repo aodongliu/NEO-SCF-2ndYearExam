@@ -1,0 +1,2 @@
+ NEO-SCF converged after iteration #                      35
+ E= -112.082535010465

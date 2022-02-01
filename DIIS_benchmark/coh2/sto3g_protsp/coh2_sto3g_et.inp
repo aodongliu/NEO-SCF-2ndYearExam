@@ -1,0 +1,44 @@
+[Molecule]
+charge = 0
+mult = 1
+geom:
+ c        0.000000    0.000000    0.000000
+ o        0.000000    0.000000    1.220000
+ h        0.935307    0.000000   -0.540000 Q
+ h       -0.935307    0.000000   -0.540000 Q
+
+[QM]
+reference = Real RHF
+nucreference = Real UHF
+job = SCF
+
+[PROTQM]
+reference = Real UHF
+
+[SCF]
+NEO = TRUE
+GUESS = CORE
+PROT_GUESS = CORE
+PRINTMOS = TRUE
+EXTRAP = TRUE
+MAXITER = 128
+ETOL= 1E-10
+
+[BASIS]
+basis = sto-3g
+
+[PBASIS]
+basis = prot-sp
+
+[MISC]
+nsmp = 10
+mem = 6000 MB
+
+[INTS]
+ALG = INCORE
+
+[PINTS]
+ALG = INCORE
+
+[EPINTS]
+ALG = INCORE

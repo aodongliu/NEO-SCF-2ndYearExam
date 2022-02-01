@@ -1,0 +1,674 @@
+ChronusQ Job Started: Mon Aug 23 10:50:10 2021
+
+    ______ __                                      ____  
+   / ____// /_   _____ ____   ____   __  __ _____ / __ \ 
+  / /    / __ \ / ___// __ \ / __ \ / / / // ___// / / / 
+ / /___ / / / // /   / /_/ // / / // /_/ /(__  )/ /_/ /  
+ \____//_/ /_//_/    \____//_/ /_/ \__,_//____/ \___\_\  
+
+Release Version: 0.5.0
+
+
+Contributors List:
+================================================================================
+Name                     Institution
+--------------------------------------------------------
+Xiaosong Li              University of Washington
+David Williams-Young     Lawrence Berkeley National Lab
+Edward Valeev            Virginia Tech
+Eugene DePrince III      Florida State University
+Sharon Hammes-Schiffer   Yale University
+Qiming Sun               AxiomQuant
+Alessio Petrone          University of Washington
+Andrew Wildman           University of Washington
+Hang Hu                  University of Washington
+Tianyuan Zhang           University of Washington
+Torin Stetina            University of Washington
+Adam Grofe               University of Washington
+Brandon Cooper           Florida State University
+Chad Hoyer               University of Washington
+Hongbin Liu              University of Washington
+Joshua Goings            University of Washington
+Lauren Koulias           University of Washington
+Lixin Lu                 University of Washington
+Luning Zhao              University of Washington
+Shichao Sun              University of Washington
+Xiaolin Liu              University of Washington
+--------------------------------------------------------
+
+
+
+Input File:
+================================================================================
+[Molecule]
+charge = 0
+mult = 1
+geom:
+ c        0.000000    0.000000    0.000000
+ o        0.000000    0.000000    1.220000
+ h        0.935307    0.000000   -0.540000 Q
+ h       -0.935307    0.000000   -0.540000 Q
+
+[QM]
+reference = Real RHF
+nucreference = Real UHF
+job = SCF
+
+[PROTQM]
+reference = Real UHF
+
+[SCF]
+NEO = TRUE
+GUESS = CORE
+PROT_GUESS = CORE
+PRINTMOS = TRUE
+EXTRAP = TRUE
+MAXITER = 128
+
+[BASIS]
+basis = sto-3g
+
+[PBASIS]
+basis = prot-sp
+
+[MISC]
+nsmp = 10
+mem = 6000 MB
+
+[INTS]
+ALG = INCORE
+
+[PINTS]
+ALG = INCORE
+
+[EPINTS]
+ALG = INCORE
+================================================================================
+
+
+
+
+
+  *** Allocating 6 GB *** 
+  *** ChronusQ will use 10 OpenMP threads ***
+  *** ChronusQ will use 1 MPI Processes ***
+
+
+
+
+Molecular Information:
+================================================================================
+
+  NAtoms                      4
+  Total Electrons             16
+  Particle Number Charge      0              e
+  Molecular Charge            0.000          e
+  Nuclear Repulsion Energy    2.08200870e+01 Eh
+
+  Center of Mass              { 0.00000e+00    ,0.00000e+00    ,1.16022e+00    }
+  Center of Charges           { 0.00000e+00    ,0.00000e+00    ,1.02518e+00    }
+
+  Moment of Inertia           { 8.71147e+01    ,0.00000e+00    ,0.00000e+00    ,
+                                0.00000e+00    ,9.34115e+01    ,0.00000e+00    ,
+                                0.00000e+00    ,0.00000e+00    ,6.29682e+00    }
+
+  Geometry:                   
+  ----------------------------------------------------------------------------  
+    Element   ZNuc     Mass (AMU)       X (Bohr)       Y (Bohr)       Z (Bohr)
+
+    C-12      6.0      1.20000e+01   0.00000e+00    0.00000e+00    0.00000e+00
+    O-16      8.0      1.59949e+01   0.00000e+00    0.00000e+00    2.30547e+00
+    H-1       1.0      1.00783e+00   1.76747e+00    0.00000e+00   -1.02045e+00
+    H-1       1.0      1.00783e+00  -1.76747e+00    0.00000e+00   -1.02045e+00
+
+================================================================================
+
+  *** Reading Basis Set from /home/aodongliu/chronusq_dev_neo2/basis/sto3g.gbs ***
+
+Basis Set Information:
+================================================================================
+
+  NBasis                   12
+  NPrimitive               36
+  NShell                   8
+  Max Primitive            3
+  Max L                    1
+
+
+  Shell Information:
+  ----------------------------------------------------------------------------  
+    #    L          Exponents        Normalized Contraction
+
+    0    0         7.1617e+01                    2.7078e+00
+                   1.3045e+01                    2.6189e+00
+                   3.5305e+00                    8.1619e-01
+
+    1    0         2.9412e+00                   -1.6002e-01
+                   6.8348e-01                    2.1404e-01
+                   2.2229e-01                    1.6154e-01
+
+    2    1         2.9412e+00                    8.5604e-01
+                   6.8348e-01                    5.3830e-01
+                   2.2229e-01                    8.5276e-02
+
+    3    0         1.3071e+02                    4.2519e+00
+                   2.3809e+01                    4.1123e+00
+                   6.4436e+00                    1.2816e+00
+
+    4    0         5.0332e+00                   -2.3941e-01
+                   1.1696e+00                    3.2023e-01
+                   3.8039e-01                    2.4169e-01
+
+    5    1         5.0332e+00                    1.6755e+00
+                   1.1696e+00                    1.0536e+00
+                   3.8039e-01                    1.6690e-01
+
+    6    0         3.4253e+00                    2.7693e-01
+                   6.2391e-01                    2.6784e-01
+                   1.6886e-01                    8.3474e-02
+
+    7    0         3.4253e+00                    2.7693e-01
+                   6.2391e-01                    2.6784e-01
+                   1.6886e-01                    8.3474e-02
+
+
+================================================================================
+
+
+  Property Integrals:
+    * Will Compute Length Gauge Electric Multipoles up to Octupole
+    * Will Compute Velocity Gauge Electric Multipoles up to Octupole
+    * Will Compute Magnetic Multipoles up to Quadrupole
+
+  Two particle integral:
+        Contraction Algorithm:INCORE (Gemm)
+
+================================================================================
+
+  *** Reading Basis Set from /home/aodongliu/chronusq_dev_neo2/basis/prot-sp.gbs ***
+
+Basis Set Information:
+================================================================================
+
+  NBasis                   8
+  NPrimitive               8
+  NShell                   4
+  Max Primitive            1
+  Max L                    1
+
+
+  Shell Information:
+  ----------------------------------------------------------------------------  
+    #    L          Exponents        Normalized Contraction
+
+    0    0         4.0000e+00                    2.0158e+00
+
+    1    1         4.0000e+00                    8.0633e+00
+
+    2    0         4.0000e+00                    2.0158e+00
+
+    3    1         4.0000e+00                    8.0633e+00
+
+
+================================================================================
+
+
+  Property Integrals:
+    * Will Compute Length Gauge Electric Multipoles up to Octupole
+    * Will Compute Velocity Gauge Electric Multipoles up to Octupole
+    * Will Compute Magnetic Multipoles up to Quadrupole
+
+  Two particle integral:
+        Contraction Algorithm:INCORE (Gemm)
+
+================================================================================
+
+
+  Property Integrals:
+    * Will Compute Length Gauge Electric Multipoles up to Octupole
+    * Will Compute Velocity Gauge Electric Multipoles up to Octupole
+    * Will Compute Magnetic Multipoles up to Quadrupole
+
+  Two particle integral:
+        Contraction Algorithm:INCORE (Gemm)
+
+================================================================================
+
+  *** Parsing QM.REFERENCE options ***
+  *** Parsing QM.NUCREFERENCE options ***
+
+
+
+
+  *** Parsing QM.REFERENCE options ***
+
+
+
+Hamiltonian Options:
+================================================================================
+
+                                 Integral:
+  ----------------------------------------------------------------------------  
+                               Basis Type:REAL_GTO
+                      Finite Width Nuclei:False
+                            Using Libcint:False
+
+                    One-Component Options:
+  ----------------------------------------------------------------------------  
+           Perturbative Scalar Relativity:Off
+       Perturbative Spin-orbit Relativity:Off
+
+                    Two-Component Options:
+  ----------------------------------------------------------------------------  
+           One-Electron Scalar Relativity:Off
+       One-Electron Spin-orbit Relativity:Off
+              Boettger Spin-orbit Scaling:Off
+             Atomic Mean Field Spin-orbit:Off
+
+                   Four-Component Options:
+  ----------------------------------------------------------------------------  
+                        Bare Coulomb Term:Off
+                       Dirac Coulomb Term:Off
+                  Dirac Coulomb SSSS Term:Off
+                               Gaunt Term:Off
+                               Gauge Term:Off
+
+================================================================================
+
+  *** Parsing PROTQM.REFERENCE options ***
+
+
+
+Hamiltonian Options:
+================================================================================
+
+                                 Integral:
+  ----------------------------------------------------------------------------  
+                               Basis Type:REAL_GTO
+                      Finite Width Nuclei:False
+                            Using Libcint:False
+
+                    One-Component Options:
+  ----------------------------------------------------------------------------  
+           Perturbative Scalar Relativity:Off
+       Perturbative Spin-orbit Relativity:Off
+
+                    Two-Component Options:
+  ----------------------------------------------------------------------------  
+           One-Electron Scalar Relativity:Off
+       One-Electron Spin-orbit Relativity:Off
+              Boettger Spin-orbit Scaling:Off
+             Atomic Mean Field Spin-orbit:Off
+
+                   Four-Component Options:
+  ----------------------------------------------------------------------------  
+                        Bare Coulomb Term:Off
+                       Dirac Coulomb Term:Off
+                  Dirac Coulomb SSSS Term:Off
+                               Gaunt Term:Off
+                               Gauge Term:Off
+
+================================================================================
+
+  Using Libint 
+  Libint-ERI4 duration   = 7.3718e-03
+  Using Libint 
+  Libint-ERI4 duration   = 9.3731e-05
+  Using Libint 
+  Libint-TPI4 duration   = 6.3303e-04
+  *** Forming Initial Guess Density for SCF Procedure ***
+
+    * Forming the Core Hamiltonian Guess (F = H)
+
+  *** Forming Initial Guess Density for SCF Procedure ***
+
+    * Forming the Core Hamiltonian Guess (F = H)
+
+================================================================================
+Self Consistent Field (SCF) Settings:
+
+  Reference:                          Real 
+  Density Convergence Tolerence:      1.000000e-08
+  Energy Convergence Tolerence:       1.000000e-10
+  Maximum Number of SCF Cycles:       128
+  SCF Algorithm:                      Conventional SCF
+  Static Damping Factor:              7.000000e-01
+  Damping Error:                      1.000000e-03
+  DIIS Extrapolation Algorithm:       CDIIS
+    * DIIS will track up to 10 previous iterations
+
+--------------------------------------------------------------------------------
+
+SCF Iteration   Energy (Eh)       ΔE (Eh)           |ΔP(S)|           |ΔP(M)|        
+-------------   -----------       -------           -------           -------           
+  Protonic       SCF: 0 iteration; E =   9.259585e+00
+  Electronic     SCF: 0 iteration; E =  -2.139954e+02
+  SCFIt: 0     -183.9156937104   
+  Protonic       SCF: 72 iterations; E =   4.8158991973
+  Electronic     SCF: 21 iterations; E = -136.8492340278
+  SCFIt: 1     -111.2132478434    7.2702446e+01   
+  Protonic       SCF: 50 iterations; E =  4.5381396e+00
+  Electronic     SCF: 18 iterations; E = -1.3734853e+02
+  SCFIt: 2     -111.9903059717   -7.7705813e-01   
+  Protonic       SCF: 37 iterations; E =  4.4288980e+00
+  Electronic     SCF: 17 iterations; E = -1.3721562e+02
+  SCFIt: 3     -111.9666333364    2.3672635e-02   
+  Protonic       SCF: 49 iterations; E =  4.4605463e+00
+  Electronic     SCF: 17 iterations; E = -1.3725193e+02
+  SCFIt: 4     -111.9712965193   -4.6631829e-03   
+  Protonic       SCF: 83 iterations; E =  4.4519069e+00
+  Electronic     SCF: 16 iterations; E = -1.3724191e+02
+  SCFIt: 5     -111.9699132275    1.3832918e-03   
+  Protonic       SCF: 15 iterations; E =  4.4542975e+00
+  Electronic     SCF: 12 iterations; E = -1.3724467e+02
+  SCFIt: 6     -111.9702870557   -3.7382819e-04   
+  Protonic       SCF: 6 iterations; E =  4.4536385e+00
+  Electronic     SCF: 9 iterations; E = -1.3724391e+02
+  SCFIt: 7     -111.9701833375    1.0371824e-04   
+  Protonic       SCF: 6 iterations; E =  4.4538203e+00
+  Electronic     SCF: 8 iterations; E = -1.3724412e+02
+  SCFIt: 8     -111.9702119084   -2.8570981e-05   
+  Protonic       SCF: 6 iterations; E =  4.4537702e+00
+  Electronic     SCF: 8 iterations; E = -1.3724406e+02
+  SCFIt: 9     -111.9702040224    7.8860263e-06   
+  Protonic       SCF: 5 iterations; E =  4.4537840e+00
+  Electronic     SCF: 8 iterations; E = -1.3724408e+02
+  SCFIt: 10    -111.9702061979   -2.1754726e-06   
+  Protonic       SCF: 5 iterations; E =  4.4537802e+00
+  Electronic     SCF: 8 iterations; E = -1.3724407e+02
+  SCFIt: 11    -111.9702055977    6.0022572e-07   
+  Protonic       SCF: 5 iterations; E =  4.4537812e+00
+  Electronic     SCF: 7 iterations; E = -1.3724407e+02
+  SCFIt: 12    -111.9702057633   -1.6559937e-07   
+  Protonic       SCF: 5 iterations; E =  4.4537809e+00
+  Electronic     SCF: 5 iterations; E = -1.3724407e+02
+  SCFIt: 13    -111.9702057178    4.5507988e-08   
+  Protonic       SCF: 4 iterations; E =  4.4537810e+00
+  Electronic     SCF: 5 iterations; E = -1.3724407e+02
+  SCFIt: 14    -111.9702057301   -1.2376404e-08   
+  Protonic       SCF: 4 iterations; E =  4.4537810e+00
+  Electronic     SCF: 5 iterations; E = -1.3724407e+02
+  SCFIt: 15    -111.9702057267    3.4168011e-09   
+  Protonic       SCF: 4 iterations; E =  4.4537810e+00
+  Electronic     SCF: 4 iterations; E = -1.3724407e+02
+  SCFIt: 16    -111.9702057277   -9.4226493e-10   
+  Protonic       SCF: 3 iterations; E =  4.4537810e+00
+  Electronic     SCF: 4 iterations; E = -1.3724407e+02
+  SCFIt: 17    -111.9702057274    2.6170710e-10   
+  Protonic       SCF: 1 iteration; E =  4.4537810e+00
+  Electronic     SCF: 1 iteration; E = -1.3724407e+02
+  SCFIt: 18    -111.9702057275   -4.9993787e-11   
+
+NEO-SCF Completed: E(R-) = -111.9702057274 Eh after 18 SCF Iteration
+================================================================================
+
+
+SCF Results:
+================================================================================
+
+Orbital Eigenenergies (Alpha) / Eh
+--------------------------------------------------------------------------------
+Occupied:
+  -8.1384e-01  -8.1384e-01
+
+Virtual:
+   6.1617e-01   6.1617e-01   6.5815e-01   6.5815e-01   6.5823e-01
+   6.5823e-01
+--------------------------------------------------------------------------------
+
+
+Orbital Eigenenergies (Beta) / Eh
+--------------------------------------------------------------------------------
+Occupied:
+
+
+Virtual:
+   7.7380e-01   7.7380e-01   7.7400e-01   7.7400e-01   9.2500e-01
+   9.2500e-01   1.1012e+00   1.1012e+00
+--------------------------------------------------------------------------------
+
+
+Canonical Molecular Orbital Coefficients (Alpha)
+--------------------------------------------------------------------------------
+
+                                     1             2             3             4
+ EigV --                  -8.13837e-01  -8.13837e-01   6.16172e-01   6.16172e-01
+
+ 1    1  O-16   0 S        7.45822e-02   7.45822e-02   7.04003e-01   7.00706e-01
+
+ 2    2  H-1    0 PX      -6.11451e-01  -6.11451e-01   8.16855e-02   8.13031e-02
+ 3    2  H-1    0 PY       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 4    2  H-1    0 PZ       3.47225e-01   3.47225e-01  -7.37106e-03  -7.33655e-03
+
+ 5    3  H-1    0 S       -7.45822e-02   7.45822e-02   7.00706e-01  -7.04003e-01
+ 6              1 PX      -6.11451e-01   6.11451e-01  -8.13031e-02   8.16855e-02
+ 7              1 PY       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 8              1 PZ      -3.47225e-01   3.47225e-01  -7.33655e-03   7.37106e-03
+
+
+                                     5             6             7             8
+ EigV --                   6.58150e-01   6.58150e-01   6.58231e-01   6.58231e-01
+
+ 1    1  O-16   0 S       -3.36591e-02  -3.36588e-02   0.00000e+00   0.00000e+00
+
+ 2    2  H-1    0 PX       3.45670e-01   3.45667e-01   0.00000e+00   0.00000e+00
+ 3    2  H-1    0 PY       0.00000e+00   0.00000e+00  -7.07310e-01   7.06903e-01
+ 4    2  H-1    0 PZ       6.15941e-01   6.15936e-01   0.00000e+00   0.00000e+00
+
+ 5    3  H-1    0 S        3.36588e-02  -3.36591e-02   0.00000e+00   0.00000e+00
+ 6              1 PX       3.45667e-01  -3.45670e-01   0.00000e+00   0.00000e+00
+ 7              1 PY       0.00000e+00   0.00000e+00   7.06903e-01   7.07310e-01
+ 8              1 PZ      -6.15936e-01   6.15941e-01   0.00000e+00   0.00000e+00
+
+--------------------------------------------------------------------------------
+
+
+Canonical Molecular Orbital Coefficients (Beta)
+--------------------------------------------------------------------------------
+
+                                     1             2             3             4
+ EigV --                   7.73798e-01   7.73798e-01   7.73998e-01   7.73998e-01
+
+ 1    1  O-16   0 S       -7.53338e-03   7.53034e-03   0.00000e+00   0.00000e+00
+
+ 2    2  H-1    0 PX      -3.51958e-01   3.51817e-01   0.00000e+00   0.00000e+00
+ 3    2  H-1    0 PY       0.00000e+00   0.00000e+00   7.07469e-01   7.06745e-01
+ 4    2  H-1    0 PZ      -6.13408e-01   6.13161e-01   0.00000e+00   0.00000e+00
+
+ 5    3  H-1    0 S        7.53034e-03   7.53338e-03   0.00000e+00   0.00000e+00
+ 6              1 PX      -3.51817e-01  -3.51958e-01   0.00000e+00   0.00000e+00
+ 7              1 PY       0.00000e+00   0.00000e+00  -7.06745e-01   7.07469e-01
+ 8              1 PZ       6.13161e-01   6.13408e-01   0.00000e+00   0.00000e+00
+
+
+                                     5             6             7             8
+ EigV --                   9.24996e-01   9.24996e-01   1.10121e+00   1.10121e+00
+
+ 1    1  O-16   0 S       -5.42572e-01   5.42652e-01  -4.53381e-01   4.53295e-01
+
+ 2    2  H-1    0 PX      -3.90327e-01   3.90385e-01   4.73117e-01  -4.73028e-01
+ 3    2  H-1    0 PY       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 4    2  H-1    0 PZ       2.30623e-01  -2.30657e-01  -2.65895e-01   2.65844e-01
+
+ 5    3  H-1    0 S        5.42652e-01   5.42572e-01   4.53295e-01   4.53381e-01
+ 6              1 PX      -3.90385e-01  -3.90327e-01   4.73028e-01   4.73117e-01
+ 7              1 PY       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 8              1 PZ      -2.30657e-01  -2.30623e-01   2.65844e-01   2.65895e-01
+
+--------------------------------------------------------------------------------
+
+================================================================================
+
+Spin Information:
+--------------------------------------------------------------------------------
+
+  <Sx> =    0.00000
+  <Sy> =    0.00000
+  <Sz> =    1.00000
+  <S²> =    2.00000
+
+--------------------------------------------------------------------------------
+
+
+Charge Analysis:
+--------------------------------------------------------------------------------
+
+  Atom                  Mulliken Charges      Lowdin Charges
+  ----------------------------------------------------------------------------  
+  C-12                           1.00000             1.00000
+  O-16                          -1.00000            -1.00000
+  H-1                            0.00000             0.00000
+  H-1                            0.00000             0.00000
+
+--------------------------------------------------------------------------------
+
+
+SCF Results:
+================================================================================
+
+Orbital Eigenenergies (Alpha) / Eh
+--------------------------------------------------------------------------------
+Occupied:
+  -2.0232e+01  -1.0985e+01  -1.2732e+00  -7.5635e-01  -5.7668e-01
+  -4.8157e-01  -3.8451e-01  -2.7721e-01
+
+Virtual:
+   3.3685e-01   8.3348e-01   9.3694e-01   9.6572e-01
+--------------------------------------------------------------------------------
+
+
+Canonical Molecular Orbital Coefficients (Alpha)
+--------------------------------------------------------------------------------
+
+                                     1             2             3             4
+ EigV --                  -2.02323e+01  -1.09855e+01  -1.27324e+00  -7.56348e-01
+
+ 1    0  C-12   0 S        5.38434e-04  -9.92250e-01  -1.24777e-01   2.00881e-01
+ 2              1 S       -7.22835e-03  -3.47671e-02   2.88565e-01  -6.62236e-01
+ 3              2 PX       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 4              2 PY       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 5              2 PZ      -6.24442e-03  -5.61495e-04   1.45681e-01   2.60211e-01
+
+ 6    1  O-16   0 S        9.94265e-01  -1.71530e-04  -2.19967e-01  -1.03545e-01
+ 7              1 S        2.59911e-02   6.06826e-03   7.73199e-01   4.49500e-01
+ 8              2 PX       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 9              2 PY       0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+ 10             2 PZ      -5.53340e-03  -1.85435e-03  -1.60421e-01   1.74095e-01
+
+ 11   2  H-1    0 S        2.64060e-04   6.93785e-03   2.75589e-02  -1.93040e-01
+
+ 12   3  H-1    0 S        2.64060e-04   6.93785e-03   2.75589e-02  -1.93040e-01
+
+
+                                     5             6             7             8
+ EigV --                  -5.76675e-01  -4.81567e-01  -3.84509e-01  -2.77205e-01
+
+ 1    0  C-12   0 S        0.00000e+00  -1.81129e-02   0.00000e+00   0.00000e+00
+ 2              1 S        0.00000e+00   2.76705e-02   0.00000e+00   0.00000e+00
+ 3              2 PX      -6.01850e-01   0.00000e+00   0.00000e+00   3.26710e-01
+ 4              2 PY       0.00000e+00   0.00000e+00  -6.15437e-01   0.00000e+00
+ 5              2 PZ       0.00000e+00   4.83600e-01   0.00000e+00   0.00000e+00
+
+ 6    1  O-16   0 S        0.00000e+00   8.67507e-02   0.00000e+00   0.00000e+00
+ 7              1 S        0.00000e+00  -4.68455e-01   0.00000e+00   0.00000e+00
+ 8              2 PX      -4.69757e-01   0.00000e+00   0.00000e+00  -8.75220e-01
+ 9              2 PY       0.00000e+00   0.00000e+00  -6.70874e-01   0.00000e+00
+ 10             2 PZ       0.00000e+00  -6.85604e-01   0.00000e+00   0.00000e+00
+
+ 11   2  H-1    0 S       -2.11577e-01  -1.17036e-01   0.00000e+00   2.81523e-01
+
+ 12   3  H-1    0 S        2.11577e-01  -1.17036e-01   0.00000e+00  -2.81523e-01
+
+
+                                     9            10            11            12
+ EigV --                   3.36853e-01   8.33481e-01   9.36939e-01   9.65718e-01
+
+ 1    0  C-12   0 S        0.00000e+00  -1.87843e-01   0.00000e+00   1.12574e-01
+ 2              1 S        0.00000e+00   1.24134e+00   0.00000e+00  -7.33854e-01
+ 3              2 PX       0.00000e+00   0.00000e+00   1.11799e+00   0.00000e+00
+ 4              2 PY       8.16169e-01   0.00000e+00   0.00000e+00   0.00000e+00
+ 5              2 PZ       0.00000e+00  -4.68947e-01   0.00000e+00  -1.12632e+00
+
+ 6    1  O-16   0 S        0.00000e+00   1.82634e-02   0.00000e+00  -1.17865e-01
+ 7              1 S        0.00000e+00  -1.00982e-01   0.00000e+00   8.69815e-01
+ 8              2 PX       0.00000e+00   0.00000e+00  -2.58048e-01   0.00000e+00
+ 9              2 PY      -7.71248e-01   0.00000e+00   0.00000e+00   0.00000e+00
+ 10             2 PZ       0.00000e+00   1.54513e-01   0.00000e+00  -9.35219e-01
+
+ 11   2  H-1    0 S        0.00000e+00  -9.36323e-01  -9.18545e-01  -7.71439e-02
+
+ 12   3  H-1    0 S        0.00000e+00  -9.36323e-01   9.18545e-01  -7.71439e-02
+
+--------------------------------------------------------------------------------
+
+================================================================================
+
+Spin Information:
+--------------------------------------------------------------------------------
+
+  <Sx> =    0.00000
+  <Sy> =    0.00000
+  <Sz> =    0.00000
+  <S²> =    0.00000
+
+--------------------------------------------------------------------------------
+
+
+Charge Analysis:
+--------------------------------------------------------------------------------
+
+  Atom                  Mulliken Charges      Lowdin Charges
+  ----------------------------------------------------------------------------  
+  C-12                          -0.44861            -0.30310
+  O-16                          -0.22489            -0.15095
+  H-1                            0.33675             0.22702
+  H-1                            0.33675             0.22702
+
+--------------------------------------------------------------------------------
+
+Multipole Information:
+--------------------------------------------------------------------------------
+
+Electric Dipole Moment                            (Debye)
+X=           0.0000000000 Y=          0.0000000000 Z=         -2.5764770679
+
+Electric Quadrupole Moment                        (Debye-Å)
+XX=         -8.4669552140 XY=         0.0000000000 XZ=         0.0000000000
+YX=          0.0000000000 YY=       -10.2174430876 YZ=         0.0000000000
+ZX=          0.0000000000 ZY=         0.0000000000 ZZ=       -12.5256198339
+
+
+
+
+Electric Octupole Moment                          (Debye-Å²)
+XXX=         0.0000000000 XXY=        0.0000000000 XXZ=       -6.8458191105
+XYX=         0.0000000000 XYY=        0.0000000000 XYZ=        0.0000000000
+XZX=        -6.8458191105 XZY=        0.0000000000 XZZ=        0.0000000000
+YXX=         0.0000000000 YXY=        0.0000000000 YXZ=        0.0000000000
+YYX=         0.0000000000 YYY=        0.0000000000 YYZ=       -4.2948002549
+YZX=         0.0000000000 YZY=       -4.2948002549 YZZ=        0.0000000000
+ZXX=        -6.8458191105 ZXY=        0.0000000000 ZXZ=        0.0000000000
+ZYX=         0.0000000000 ZYY=       -4.2948002549 ZYZ=        0.0000000000
+ZZX=         0.0000000000 ZZY=        0.0000000000 ZZZ=      -18.7455248180
+--------------------------------------------------------------------------------
+
+
+Timing Summary:
+================================================================================
+  Section                            Total Duration (s)    Average Duration (s)
+--------------------------------------------------------------------------------
+  Total program time            :                7.2661
+  - Memory allocation           :                1.5148
+  - Core Hamiltonian            :                0.1552
+  - Guess Formation             :                0.0007
+  - SCF                         :                0.0645
+    - SCF Iteration             :                0.0145                  0.0024
+      - Fock Formation          :                0.0011                  0.0002
+        - J Contraction         :                0.0002                  0.0000
+        - K Contraction         :                0.0004                  0.0000
+      - Property Evaluation     :                0.0019                  0.0002
+================================================================================
+
+
+ChronusQ Job Ended: Mon Aug 23 10:50:17 2021
+

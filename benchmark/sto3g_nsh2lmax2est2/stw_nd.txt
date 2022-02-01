@@ -1,0 +1,48 @@
+ Summary for Macro-SCF Iteration #                       1
+ Electronic Converged after Iteration #                      25
+ Protonic Converged after Iteration #                     220
+ NEO-SCF Energy at This Iteration Step  -112.0800941715992
+ Total Energy Has NOT Converged!!!
+ AL a
+--
+ Summary for Macro-SCF Iteration #                       2
+ Electronic Converged after Iteration #                      24
+ Protonic Converged after Iteration #                     181
+ NEO-SCF Energy at This Iteration Step  -112.0824591677806
+ Total Energy Has NOT Converged!!!
+ AL a
+--
+ Summary for Macro-SCF Iteration #                       3
+ Electronic Converged after Iteration #                      22
+ Protonic Converged after Iteration #                     152
+ NEO-SCF Energy at This Iteration Step  -112.0825328057565
+ Total Energy Has NOT Converged!!!
+ AL a
+--
+ Summary for Macro-SCF Iteration #                       4
+ Electronic Converged after Iteration #                      18
+ Protonic Converged after Iteration #                     123
+ NEO-SCF Energy at This Iteration Step  -112.0825349473680
+ Total Energy Has NOT Converged!!!
+ AL a
+--
+ Summary for Macro-SCF Iteration #                       5
+ Electronic Converged after Iteration #                      15
+ Protonic Converged after Iteration #                      96
+ NEO-SCF Energy at This Iteration Step  -112.0825350086597
+ Total Energy Has NOT Converged!!!
+ AL a
+--
+ Summary for Macro-SCF Iteration #                       6
+ Electronic Converged after Iteration #                      12
+ Protonic Converged after Iteration #                      70
+ NEO-SCF Energy at This Iteration Step  -112.0825350104131
+ Total Energy Has NOT Converged!!!
+ AL a
+--
+ Summary for Macro-SCF Iteration #                       7
+ Electronic Converged after Iteration #                       9
+ Protonic Converged after Iteration #                      46
+ NEO-SCF Energy at This Iteration Step  -112.0825350104634
+ TOTAL ENERGY HAS CONVERGED!!!
+ NEO-SCF converged after iteration #                       7

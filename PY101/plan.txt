@@ -1,0 +1,7 @@
+1. conventional DFT geometry optimization and then conventional TDDFT to identify relevant excited electronic state, also benchmarking the functional and basis set (maybe Savannah has already done this to some extent)
+2. NEO-DFT and NEO-TDDFT geometry optimizations and excitation energies to compare to conventional case (this capability for linear-response NEO-TDDFT is in our development branch of Q-Chem, and my student Coraline could help with this)
+3. conventional RT-TDDFT (frozen nuclei), checking functional and basis set to be sure everything is converged and benchmarked (probably with Chronus Quantum)
+4. conventional RT-TDDFT with Ehrenfest (probably with Chronus Quantum)
+5. NEO-RT-TDDFT (frozen other nuclei) (this is in a development version of Chronus Quantum, and Xiaosong’s student Aodong could help with this)
+6. NEO-RT-TDDFT-Ehrenfest.(this is not quite ready yet in Chronus Quantum for multiple protons, but Xiaosong’s group is working on the coding, and hopefully it will be ready by the time we get to this step)
+
