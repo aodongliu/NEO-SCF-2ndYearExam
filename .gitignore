@@ -2,3 +2,6 @@ j19/
 j19p/
 NEOSCF.tar.gz
 test_py_data_processing/Data/
+neo_scf_data_processing/OutputFiles
+neo_scf_data_processing/Data
+neo_scf_data_processing/FailedCalc
